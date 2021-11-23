@@ -72,3 +72,21 @@ electron-packager . --overwrite --platform=win32 --arch=ia32  --prune=true --out
 # Linux
 electron-packager . --overwrite --platform=linux --arch=x64  --prune=true --out=release-builds
 ```
+
+# Run
+
+## Windows
+
+Go to "releases" directory and download "*jira-time-tracking-exporter-win32-ia32-x.y.z.zip*"
+
+Unzip the archive where you want and execute "*jira-time-tracking-exporter.exe*"
+
+## Linux
+
+Go to "releases" directory and download "*jira-time-tracking-exporter-linux-x64-x.y.z.zip*"
+
+Unzip the archive where you want and execute "*jira-time-tracking-exporter*"
+
+## Mac
+
+To be packaged (one day)
