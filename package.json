@@ -1,0 +1,22 @@
+{
+  "name": "jira-time-tracking-exporter",
+  "version": "1.0.0",
+  "description": "A time tracking exporter done with Electron",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo TODO",
+    "package:mac": "electron-packager . --overwrite --platform=darwin --arch=x64  --prune=true --out=release-builds",
+    "package:windows": "electron-packager . --overwrite --platform=win32 --arch=ia32  --prune=true --out=release-builds",
+    "package:linux": "electron-packager . --overwrite --platform=linux --arch=x64  --prune=true --out=release-builds"
+  },
+  "keywords": [],
+  "author": "Jérémy Tho",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "electron": "^12.2.3",
+    "electron-packager": "^15.2.0"
+  },
+  "dependencies": {
+    "@electron/remote": "^2.0.1"
+  }
+}

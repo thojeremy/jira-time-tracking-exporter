@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <title>Jira Time Tracking Exporter</title>
+    <link rel="stylesheet" href="./app/resources/external-libs/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="./app/resources/styles/styles.css" />
+  </head>
+  <body>
+
+    <div class="container">
+
+      <!-- The form -->
+      <div class="row">
+        <form role="form" class="form-horizontal">
+          <div class="form-group">
+            <input  type="text"
+                    class="form-control"
+                    placeholder="Jira url"
+                    id="url"/>
+          </div>
+
+          <div class="form-group">
+            <input  type="email"
+                    class="form-control"
+                    placeholder="Jira email"
+                    id="email"/>
+          </div>
+
+          <div class="form-group">
+            <input  type="password"
+                    class="form-control"
+                    placeholder="Jira token"
+                    id="token"/>
+          </div>
+
+          <div class="form-group">
+            <input  type="number"
+                    class="form-control"
+                    placeholder="Jira filter ID"
+                    id="filterId"/>
+          </div>
+
+          <input  type="button" 
+                  class="btn btn-success col-md-2" 
+                  id="generateButton" 
+                  value="Generate" />
+
+          <input  type="button" 
+                  class="btn btn-success col-md-2" 
+                  id="aggregateButton" 
+                  value="Aggregate"
+                  disabled="true" />
+        </form>
+      </div>
+
+      <!-- Error messages -->
+      <div class="row">
+        <p id="error" class="text-danger"></p>
+      </div>
+
+      <!-- The result table -->
+      <div class="row">
+        <table class="table" id="resultTable">
+        </table>
+      </div>
+      
+      <div class="row">
+        <p class="text-center" id = "loading">.: Loading :.</p>
+      </div>
+
+    </div>
+
+    <!-- Other files running in the process -->
+    <script src="./renderer.js"></script>
+    <script type="text/javascript" src="./app/resources/external-libs/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="./app/resources/external-libs/popper/popper.min.js"></script>
+    <script src="./app/resources/external-libs/bootstrap/bootstrap.min.js"></script>
+  </body>
+</html>
